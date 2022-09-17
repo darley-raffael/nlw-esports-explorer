@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+ul{
+    list-style: none;
+}
+body{
+    background-image: url(./assets/Fundo.jpg);/* url é uma função buscando o local da imagem */
+    background-position: top center; /* posicionou a imagem no topo e centralizado */
+    background-size: 100% auto;/* definiu a largura 100% da largura da tela, a altura automática */
+    background-repeat: no-repeat;/* não repitir a imagem */
+    background-color: #121214;
+
+}
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+    
+}
+header{
+    margin-top: 32px;
+    height: 120px;
+}
+
+header div{
+    margin: auto;
+    width: 120px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    transition: all linear 200ms;
+    animation: topdown .7s .2s backwards;
+}
+
+header img{
+    width: 100%;
+    border-radius: 50%;
+   
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+main{
+    max-width: 580px;
+    width: 90%; /* faz referência ao max-width */
+    margin:32px auto;
+    display: grid;
+    gap: 24px;
+}
+main section{
+    animation: downtop .9s backwards; /* valores: 1º nome animação; 2º tempo de duração; 3ºdelay - tempo de inicio; 4º  prioridade da animação
+    */
+}
+main section:nth-child(1){
+   animation-delay: 0;
+}
+main section:nth-child(2){
+   animation-delay: .4s;
+}
+main section:nth-child(3){
+  animation-delay: .8s;
+}
+
+section{
+    color: white;
+    padding-top: 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+}
+section div{
+    background: #2A2634;
+    padding: 24px 32px 32px;
+    border-radius: 8px;
+
+}
+section  h2{ /* Selecionando todos os elementos H2 da página */
+    letter-spacing: -0.47px;
+}
+section p{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+section ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+    margin-top: 24px;
+}
+ul li{
+    transition: all linear 200ms;
+}
+ul li:hover{
+    transform: scale(1.1);
+}
+.games-list img {
+    border-radius: 8px;
+    width: 90px;
+ 
+}
+.channel-list img{
+    border-radius: 50%;
+    width: 70px;
+    border: solid 1px #443E54;
+}
+
+@keyframes topdown{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes downtop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
