@@ -36,6 +36,9 @@ header div{
     transition: all linear 200ms;
     animation: topdown .7s .2s backwards;
 }
+header div a{
+    display: flex;
+}
 
 header img{
     width: 100%;
